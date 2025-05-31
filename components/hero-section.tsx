@@ -4,8 +4,20 @@ import { AvatarGroup } from "@/components/avatar-group";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen bg-zinc-950 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
-      <div className="max-w-7xl mx-auto">
+    <section className="min-h-screen pt-16 bg-zinc-950 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 lg:py-24 relative overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/videos/Hero.mp4"
+      />
+
+      <div className="absolute inset-0 bg-black/90" />
+
+      {/* Content */}
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center gap-12 lg:gap-20">
           <div className="w-full max-w-4xl flex flex-col items-center gap-6 lg:gap-8">
             <WelcomeBadge />
