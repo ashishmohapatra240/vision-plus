@@ -59,7 +59,11 @@ export function StrategySection() {
                 )}
               >
                 <button
-                  onClick={() => setActiveStrategy(strategy.id)}
+                  onClick={() =>
+                    setActiveStrategy(
+                      activeStrategy === strategy.id ? "" : strategy.id
+                    )
+                  }
                   className="w-full"
                 >
                   <div className="flex items-start gap-4 md:gap-8">
@@ -72,10 +76,10 @@ export function StrategySection() {
                       </h3>
                       <p
                         className={cn(
-                          "text-gray-600 max-w-2xl transition-all duration-300",
+                          "text-gray-600 max-w-2xl overflow-hidden transition-all duration-300",
                           activeStrategy === strategy.id
-                            ? "h-auto opacity-100"
-                            : "h-0 opacity-0"
+                            ? "max-h-[200px] opacity-100 mt-2"
+                            : "max-h-0 opacity-0 mt-0"
                         )}
                       >
                         {strategy.description}
