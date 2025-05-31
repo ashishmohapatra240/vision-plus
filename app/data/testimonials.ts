@@ -5,10 +5,7 @@ export interface Testimonial {
     role: string;
     avatar: string;
   };
-  stats?: {
-    value: string;
-    label: string;
-  }[];
+
 }
 
 export const testimonials: Testimonial[] = [
