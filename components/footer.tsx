@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   product: [
@@ -21,38 +22,44 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-gray-200 text-white">
-      <div className="container px-4 md:px-6 py-16 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-black text-white">
+      <div className="container px-4 md:px-6 py-16 md:py-24 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand Column */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-medium">Vision Plus</h2>
-            <p className="max-w-xs">
+          <div className="space-y-6">
+            <Image 
+              src="/images/logo.png" 
+              alt="Vision Plus" 
+              width={160} 
+              height={160} 
+              className="brightness-0 invert"
+            />
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
               Revolutionizing sales strategies and customer experiences through
               innovative solutions.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="">
+            <div className="flex space-x-5">
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </Link>
-              <Link href="#" className="">
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                 </svg>
               </Link>
-              <Link href="#" className="">
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -64,15 +71,15 @@ export function Footer() {
 
           {/* Product Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               Product
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-base"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -83,15 +90,15 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               Company
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-base"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -102,15 +109,15 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">
               Legal
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-base"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -120,8 +127,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-base text-gray-400 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <p className="text-sm text-gray-400 text-center">
             © {new Date().getFullYear()} Vision Plus. All rights reserved.
           </p>
         </div>
