@@ -14,7 +14,7 @@ export function HeroSection() {
         src="/videos/Hero.mp4"
       />
 
-      <div className="absolute inset-0 bg-black/90" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="max-w-7xl mx-auto relative z-10">
