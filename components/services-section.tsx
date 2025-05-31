@@ -42,7 +42,7 @@ export function ServicesSection() {
             duration: 0.6,
             ease: "power2.inOut",
           },
-          index - 1 // Stagger the animations
+          index - 1
         );
       });
     }, sectionRef);
@@ -51,7 +51,7 @@ export function ServicesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[400vh]">
+    <section ref={sectionRef} className="relative h-[480vh]">
       <div
         ref={triggerRef}
         className="sticky top-0 flex min-h-screen items-center overflow-hidden bg-background"
