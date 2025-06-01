@@ -24,7 +24,7 @@ export function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium leading-tight lg:leading-[70px] tracking-tighter">
                 <span className="text-white">Integrating power of AI </span>
                 <span className="text-white">↝</span>
-                <span className="text-white">
+                <span className="text-blue-200">
                   {" "}
                   with customer centric human touch
                 </span>
