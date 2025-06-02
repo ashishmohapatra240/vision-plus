@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 // import { AvatarGroup } from "@/components/avatar-group";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Lottie from "lottie-react";
+import arrowAnimation from "@/public/lottie/arrow.json";
 
 export function HeroSection() {
   const textRef = useRef(null);
@@ -62,13 +64,14 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
         // src="https://quarterhill.s3.eu-central-1.amazonaws.com/videos/home-hero-video.webm"
         src="/videos/Hero-2.mp4"
+        preload="auto"
       />
 
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="max-w-7xl w-full relative z-10 mx-auto px-4">
-        <div className="max-w-[740px]">
+        <div className="max-w-[780px]">
           <div className="flex flex-col gap-6">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium leading-tight lg:leading-[84px] tracking-tighter flex flex-col">
               <div className="overflow-hidden">
@@ -78,13 +81,21 @@ export function HeroSection() {
               </div>
               <div className="overflow-hidden">
                 <div ref={textRef2}>
-                  <span className="text-white">↝</span>
-                  <span className="text-blue-200"> with customer centric</span>
+                  <div className="flex items-center gap-2">
+                    <Lottie
+                      animationData={arrowAnimation}
+                      className="w-24 h-24 [&_*]:!fill-white [&_*]:!stroke-white [&_*]:!stroke-[100px]"
+                      loop={false}
+                    />
+                    <span className="text-[#A991FF]">
+                      with customer centric
+                    </span>
+                  </div>
                 </div>
               </div>
               <div className="overflow-hidden">
                 <div ref={textRef3}>
-                  <span className="text-blue-200">human touch</span>
+                  <span className="text-[#A991FF]">human touch</span>
                 </div>
               </div>
             </h1>
@@ -92,10 +103,9 @@ export function HeroSection() {
             <div className="overflow-hidden">
               <p
                 ref={paragraphRef}
-                className="text-white/80 text-sm sm:text-base leading-tight"
+                className="text-white/80 text-sm sm:text-base leading-relaxed"
               >
-                Elevate Your Sales Performance: Unleashing the Strategic Power
-                of Data to Achieve Unrivaled Success in Your Business
+                Making AI meaningful for governments, citizens, and communities
               </p>
             </div>
 
